@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Page Timer</title>
+    <style>
+      body {
+        width: 300px;
+        padding: 20px;
+        font-family: "Arial", sans-serif; /* Thin, clean font */
+        background: linear-gradient(
+          135deg,
+          #2c3e50,
+          #4ca1af
+        ); /* Gradient background */
+        color: #e0e0e0; /* Soothing white-grey font color */
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #f0f0f0; /* Light color for the heading */
+      }
+
+      .site-time {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #888; /* Thin grey line between site names */
+        padding-bottom: 10px;
+      }
+
+      #toggleButton {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        border: none;
+        border-radius: 8px; /* Slight curve on corners */
+        font-size: 16px;
+        font-weight: 300; /* Thin font for button text */
+        background: linear-gradient(
+          135deg,
+          #ff6b6b,
+          #f09433
+        ); /* Gradient on button */
+        color: white;
+        transition: background-color 0.3s ease;
+      }
+
+      #toggleButton:hover {
+        opacity: 0.9; /* Slight hover effect */
+      }
+
+      #currentTimer {
+        font-size: 24px;
+        text-align: center;
+        margin: 10px 0;
+        font-family: monospace;
+      }
+
+      .url {
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Let's Record Time!</h1>
+    <button id="toggleButton" class="not-tracking">Start Tracking</button>
+    <div id="currentTimer">00:00:00:00</div>
+    <h2>Time Spent Today</h2>
+    <div id="timeList"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
