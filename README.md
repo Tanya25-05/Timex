@@ -1,6 +1,5 @@
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ⏱️ Timex – Chrome Extension for Tab-wise Time Tracking
 
-Currently, two official plugins are available:
+**Timex** is a lightweight Chrome extension designed to help you **track the amount of time you spend on individual browser tabs**. Whether you're managing productivity, tracking billable hours, or just curious about your browsing habits, Timex makes it effortless.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
