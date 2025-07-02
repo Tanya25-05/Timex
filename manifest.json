@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Timer Extension",
+  "version": "1.0",
+  "description": "Tracks time spent on each tab",
+  "permissions": ["tabs","activeTab", "scripting", "storage"],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "src/background.js",
+    "type" : "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["index.js"]
+    }
+  ]
+}
