@@ -1,18 +1,24 @@
-// vite.config.js
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [react()],
   build: {
     rollupOptions: {
       input: {
-        background: 'background.js',
-        content: 'src/content.js',
+        main: "index.html",
       },
       output: {
-        entryFileNames: '[name].js',
+        entryFileNames: "[name].js",
+        chunkFileNames: "assets/[name]-[hash].js",
+        assetFileNames: "assets/[name]-[hash].[ext]",
       },
     },
+    outDir: "dist",
+    assetsDir: "assets",
+    sourcemap: false,
+    minify: false,
+  },
+  server: {
+    port: 3000,
+    open: false,
   },
 });
